@@ -1,0 +1,12 @@
+header {
+    text-align: center;
+}
+
+#game {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#wordPara {
+    text-align: center;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <title>Word Guess Game</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 col-lg-2"></div>
+            <header class="col-md-8 col-lg-8">
+                <h2>Personal Tech Word Guess Game</h2>
+                <p>Guess some words of gadgets you might use everyday!</p>
+            </header>
+            <div class="col-md-2 col-lg-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2 col-lg-2"></div>
+            <div class="col-md-8 col-lg-8" id=game>
+                <p id="instructions">Press any key to get started!</p>
+
+                <p id="wordPara"><span id="word"></span></p>
+
+                <p>Guessed Letters: <span id="letters"></span></p>
+                <p>Remaining Guesses: <span id="guesses"></span></p>
+                <p>Wins: <span id="wins">0</span></p>
+                <p>Losses: <span id="losses">0</span></p>
+            </div>
+            <div class="col-md-2 col-lg-2"></div>        
+        </div>
+    </div>
+
+    <!-- <audio controls>
+        <source src="assets/smb_stage_clear.wav" type="audio/wav" id="win-audio">
+        <source src="assets/smb_mariodie.wav" type="audio/wav" id="lose-audio">
+        Your browswer does not support this audio plugin.
+    </audio> -->
+    <script type="text/javascript" src="./assets/javascript/game.js"></script>
+    
+</body>
+
+</html>
