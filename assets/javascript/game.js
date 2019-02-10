@@ -8,6 +8,7 @@ var userGuesses = [];
 
 // variables to link to HTML
 var instructions = document.getElementById("instructions");
+var message = document.getElementById("message");
 var incorrectGuesses = document.getElementById("letters");
 var guessCounter = document.getElementById("guesses");
 var wordBlanks = document.getElementById("word");
@@ -46,7 +47,6 @@ function start() {
 
 // resets the game state
 function reset() {
-    instructions.textContent = "Press any key to get started!";
     userInput = null;
     chosenWord = null;
     filledBlanks = null;
@@ -112,10 +112,10 @@ document.onkeyup = function(event) {
                 // if the user wins
                 if(filledBlanks.join("") === chosenWord) {
                     // play music, increment wins, alert user of win
-                    // winAudio.play();
+                    winAudio.play();
                     won = true;
                     wins.textContent = parseInt(wins.textContent)+1;
-                    alert("You won! The word was: " + chosenWord + "\nYou get to play again!");
+                    instructions.textContent = "You won! The word was: " + chosenWord + ". You get to play again! Press any key to get started!";
                 }
             }
             // if incorrect guess
@@ -127,10 +127,10 @@ document.onkeyup = function(event) {
                 // if the user loses
                 if(parseInt(guessCounter.textContent) === 0) {
                     // play music, increment wins, alert user of loss
-                    // loseAudio.play();
+                    loseAudio.play();
                     lost = true;
                     losses.textContent = parseInt(losses.textContent)+1;
-                    alert("You lost! \nThe word was: " + chosenWord);
+                    instructions.textContent = "You lost! The word was: " + chosenWord + ". Try again, press any key to get started!";
                 }
             }
         }
